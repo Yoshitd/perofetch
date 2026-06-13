@@ -18,21 +18,35 @@ It's a single POSIX `sh` script. No runtime, no config files, no installer.
   ────────────────────────────────
     os      macOS 26.4
     kernel  25.4.0
-  󰍛  memory  11841/16384 MiB (72%)
-  󰏔  pkgs    65 (brew)
-  󰅶  uptime  2 days, 7 hours, 23 mins
-    colors  ███████████████████
+    memory  11898/16384 MiB (72%)
+    pkgs    66 (brew)
+    uptime  2 days, 7 hours, 45 mins
+    colors  ██████████████████
 ```
+
+> The icons next to each row use an icon font. The output above uses the default
+> **Phosphor** set; run `perofetch -n` for **Nerd Font** icons instead.
 
 ## Features
 
 - 🌅 PERO wordmark banner in a sunset gradient (256-color).
 - 🖥️ Detects OS, kernel, memory usage, package count, and uptime.
 - 🍎 Works on macOS, Linux (incl. Android/Termux), and the BSDs.
-- 🔤 Nerd Font icons by default, with optional Phosphor / Cozette / emoji icon sets.
+- 🔤 Phosphor icons by default, with optional Nerd Font / Cozette / emoji icon sets.
 - 🪶 Pure POSIX `sh`, single file, zero dependencies.
 
 ## Install
+
+### Homebrew (recommended)
+
+```sh
+brew install Yoshitd/tap/perofetch
+```
+
+No `brew tap` step needed — Homebrew fetches the tap automatically. Then run
+`perofetch`.
+
+### Manual
 
 ```sh
 # Clone and link into your PATH
@@ -63,8 +77,9 @@ Add this to your `~/.zshrc` (or `~/.bashrc`):
 ## Usage
 
 ```
-perofetch         Show the fetch (default Nerd Font icons)
-perofetch -p      Use Phosphor icons
+perofetch         Show the fetch (default Phosphor icons)
+perofetch -n      Use Nerd Font icons
+perofetch -p      Use Phosphor icons (default)
 perofetch -c      Use Cozette icons
 perofetch -e      Use emoji icons
 perofetch -v      Print version
@@ -75,8 +90,9 @@ perofetch -h      Show help
 
 - A POSIX shell (`sh`).
 - A terminal with 256-color support (virtually all modern terminals).
-- For the default icons: a [Nerd Font](https://www.nerdfonts.com/). If you see
-  boxes instead of icons, install a Nerd Font or run with `-e` for emoji.
+- For the icons: a [Nerd Font](https://www.nerdfonts.com/) (which also includes
+  the Phosphor and Cozette glyphs). If you see boxes instead of icons, install a
+  Nerd Font or run with `-e` for emoji.
 
 ## Customising the colors
 
