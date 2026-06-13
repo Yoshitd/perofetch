@@ -7,17 +7,26 @@
 
 ostype="$(uname)"
 
-version=1.0.0
-font=nerd
+version=1.0.1
+font=phosphor
 distrotype=none
 osi=""
 ki=""
-ri="󰍛"
-pi="󰏔"
-ui="󰅶"
+ri=""
+pi=""
+ui=""
 ci=""
 
 case $1 in
+"-n")
+	font=nerd
+	osi=""
+	ki=""
+	ri="󰍛"
+	pi="󰏔"
+	ui="󰅶"
+	ci=""
+	;;
 "-p")
 	font=phosphor
 	osi=""
@@ -51,10 +60,13 @@ case $1 in
 "-h"|"--help")
 	echo "perofetch — a warm system fetch
 
+Icons default to the Phosphor set.
+
 Flags:
--c: Cozette font
--p: Phosphor font
--e: Emoji font
+-n: Nerd Font icons
+-p: Phosphor icons (default)
+-c: Cozette icons
+-e: Emoji icons
 -v: Version"
 	exit
 	;;
